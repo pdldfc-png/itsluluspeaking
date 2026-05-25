@@ -8,293 +8,148 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ascii-bg"></div>
   <div class="cursor-glow"></div>
 
-  <div class="ascii-corner corner-tl" aria-hidden="true">
-    <pre>✦ ˚ 　⋆｡
-* 　 ✦
-˚ ☾</pre>
-  </div>
-
-  <nav>
-    <a href="#work" class="nav-link">Work</a>
-    <a href="#expertise" class="nav-link">Expertise</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#contact" class="nav-link">Contact</a>
-  </nav>
+  <header>
+    <a href="#" class="logo-link">
+      <svg class="bunny" width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <ellipse cx="8" cy="14" rx="7" ry="8" fill="#3B5FE0" opacity="0.12"/>
+        <path d="M8 6 C6 2, 3 3, 4 7 C4 10, 6 12, 8 14" stroke="#3B5FE0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <path d="M10 6 C12 2, 15 3, 14 7 C13 10, 11 12, 9 14" stroke="#3B5FE0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <circle cx="6.5" cy="9.5" r="1" fill="#E83A47"/>
+        <circle cx="10.5" cy="9.5" r="1" fill="#E83A47"/>
+      </svg>
+      itsluluspeaking
+    </a>
+    <nav>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#expertise" class="nav-link">Expertise</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
   <main>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
-      <div class="logo-wrap">
-        <svg class="logo-svg" width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <!-- Risograph texture filter -->
-            <filter id="riso" x="-5%" y="-5%" width="110%" height="110%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise"/>
-              <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
-              <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="textured"/>
-              <feComponentTransfer in="textured">
-                <feFuncA type="linear" slope="1"/>
-              </feComponentTransfer>
-            </filter>
-            <!-- Slight displacement for print misregistration -->
-            <filter id="misreg" x="-5%" y="-5%" width="110%" height="110%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="1" result="warp"/>
-              <feDisplacementMap in="SourceGraphic" in2="warp" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-            <filter id="grain-only" x="-5%" y="-5%" width="110%" height="110%">
-              <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" result="n"/>
-              <feColorMatrix type="saturate" values="0" in="n" result="g"/>
-              <feBlend in="SourceGraphic" in2="g" mode="multiply"/>
-            </filter>
-          </defs>
-
-          <!-- Patch shadow -->
-          <rect x="8" y="8" width="304" height="164" rx="22" fill="#1A1A1A" opacity="0.06"/>
-
-          <!-- Patch base - warm white -->
-          <rect x="0" y="0" width="304" height="164" rx="22" fill="#FEFCFA" stroke="#3B5FE0" stroke-width="3.5"/>
-
-          <!-- Outer stitch -->
-          <rect x="10" y="10" width="284" height="144" rx="15" stroke="#3B5FE0" stroke-width="1.2" stroke-dasharray="7 5" opacity="0.35"/>
-
-          <!-- Decorative stars top -->
-          <text x="32" y="38" font-size="18" fill="#E83A47" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="268" y="34" font-size="13" fill="#FFD93D" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="50" y="82" font-size="10" fill="#3B5FE0" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="250" y="80" font-size="16" fill="#E83A47" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="35" y="130" font-size="12" fill="#FFD93D" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="255" y="132" font-size="10" fill="#3B5FE0" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-          <text x="278" y="164" font-size="14" fill="#E83A47" filter="url(#grain-only)" style="font-family:'Courier New',monospace">✦</text>
-
-          <!-- Main typography -->
-          <text x="152" y="72" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="36" font-weight="700" fill="#2D2D2D" letter-spacing="-1.5" filter="url(#riso)">itslulu</text>
-          <text x="152" y="108" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="36" font-weight="300" fill="#3B5FE0" letter-spacing="1" filter="url(#riso)">speaking</text>
-
-          <!-- Underline accent -->
-          <line x1="80" y1="124" x2="224" y2="124" stroke="#E83A47" stroke-width="2.5" stroke-linecap="round" opacity="0.7" filter="url(#grain-only)"/>
-
-          <!-- Bottom tag pill -->
-          <rect x="88" y="136" width="128" height="20" rx="10" fill="#3B5FE0" opacity="0.08"/>
-          <text x="152" y="150" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="8.5" font-weight="600" fill="#3B5FE0" letter-spacing="2.5">VISUAL DESIGN</text>
-        </svg>
-      </div>
-
-      <p class="hero-sub">typography · visual systems · digital play</p>
-      <div class="hero-line"></div>
-      <div class="scroll-hint">↓</div>
+      <h1 class="hero-name">
+        <span class="line1">itslulu</span>
+        <span class="line2">speaking</span>
+      </h1>
+      <p class="hero-desc">Visual designer. I make typography, identities &amp; digital experiments that feel alive.</p>
     </section>
-
 
     <!-- ===== WORK ===== -->
     <section id="work">
-      <div class="section-head">
-        <h2 class="section-title">Selected Work</h2>
-        <span class="section-num">01</span>
-      </div>
+      <h2 class="sec-title"><span class="sec-num">01</span> Work</h2>
 
-      <div class="work-grid">
+      <div class="work-list">
 
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder">
-              <span class="work-index">01</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Poster</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">Typography / Print</span>
-            <h3>Typographic Poster Series</h3>
-            <p>ASCII + Swiss hybrid. Risograph texture, experimental layout.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder alt-bg-1">
-              <span class="work-index">02</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Brand</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">Identity / System</span>
-            <h3>Cultural Space Branding</h3>
-            <p>Complete VI system. Stationery, signage, environmental graphics.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder alt-bg-2">
-              <span class="work-index">03</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Editorial</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">Zine / Layout</span>
-            <h3>Independent Zine</h3>
-            <p>Print publication. Collage meets type. DIY aesthetic.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder alt-bg-3">
-              <span class="work-index">04</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Digital</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">ASCII / Generative</span>
-            <h3>Digital Experiments</h3>
-            <p>Terminal visuals, glitch art, generative typography.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder alt-bg-4">
-              <span class="work-index">05</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Packaging</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">Product / Structure</span>
-            <h3>Artisan Goods Packaging</h3>
-            <p>Structure design, label systems, unboxing experience.</p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-visual">
-            <div class="work-img-placeholder alt-bg-5">
-              <span class="work-index">06</span>
-            </div>
-            <div class="work-overlay">
-              <span class="overlay-tag">Motion</span>
-            </div>
-          </div>
-          <div class="work-meta">
-            <span class="work-cat">Kinetic Type</span>
-            <h3>Kinetic Typography</h3>
-            <p>Moving type, music visuals, loop experiments.</p>
-          </div>
-        </article>
+        <a href="#" class="work-row">
+          <span class="wr-num">01</span>
+          <span class="wr-title">Typographic Poster Series</span>
+          <span class="wr-cat">Poster / Print</span>
+          <span class="wr-year">2026</span>
+        </a>
+        <a href="#" class="work-row">
+          <span class="wr-num">02</span>
+          <span class="wr-title">Cultural Space Branding</span>
+          <span class="wr-cat">Identity / System</span>
+          <span class="wr-year">2026</span>
+        </a>
+        <a href="#" class="work-row">
+          <span class="wr-num">03</span>
+          <span class="wr-title">Independent Zine</span>
+          <span class="wr-cat">Editorial / Layout</span>
+          <span class="wr-year">2026</span>
+        </a>
+        <a href="#" class="work-row">
+          <span class="wr-num">04</span>
+          <span class="wr-title">ASCII &amp; Digital Experiments</span>
+          <span class="wr-cat">Digital Art</span>
+          <span class="wr-year">2026</span>
+        </a>
+        <a href="#" class="work-row">
+          <span class="wr-num">05</span>
+          <span class="wr-title">Artisan Goods Packaging</span>
+          <span class="wr-cat">Packaging</span>
+          <span class="wr-year">2026</span>
+        </a>
+        <a href="#" class="work-row">
+          <span class="wr-num">06</span>
+          <span class="wr-title">Kinetic Typography</span>
+          <span class="wr-cat">Motion</span>
+          <span class="wr-year">2026</span>
+        </a>
 
       </div>
     </section>
-
 
     <!-- ===== EXPERTISE ===== -->
     <section id="expertise">
-      <div class="section-head">
-        <h2 class="section-title">Expertise</h2>
-        <span class="section-num">02</span>
-      </div>
+      <h2 class="sec-title"><span class="sec-num">02</span> Expertise</h2>
 
-      <div class="expertise-grid">
-        <div class="exp-card">
-          <span class="exp-icon">[1]</span>
+      <div class="exp-list">
+        <div class="exp-item">
+          <div class="exp-icon">⟡</div>
           <h4>Typography</h4>
-          <p>Custom type, kinetic layouts, expressive letterforms that carry voice.</p>
+          <p>Custom type, kinetic layouts, letterforms with voice</p>
         </div>
-        <div class="exp-card">
-          <span class="exp-icon">[2]</span>
+        <div class="exp-item">
+          <div class="exp-icon">⬡</div>
           <h4>Visual Systems</h4>
-          <p>Brand identities built on grids, rules, and deliberate breaking of rules.</p>
+          <p>Brand identities on grids — and deliberate rule-breaking</p>
         </div>
-        <div class="exp-card">
-          <span class="exp-icon">[3]</span>
+        <div class="exp-item">
+          <div class="exp-icon">☲</div>
           <h4>Poster Design</h4>
-          <p>Single-frame storytelling. Bold composition, limited colour, maximum impact.</p>
+          <p>Single-frame impact. Bold composition, limited palette</p>
         </div>
-        <div class="exp-card">
-          <span class="exp-icon">[4]</span>
+        <div class="exp-item">
+          <div class="exp-icon">◫</div>
           <h4>Editorial</h4>
-          <p>Page-to-page rhythm. Zines, lookbooks, publications with personality.</p>
+          <p>Zines, lookbooks, publications with personality</p>
         </div>
-        <div class="exp-card">
-          <span class="exp-icon">[5]</span>
+        <div class="exp-item">
+          <div class="exp-icon">◪</div>
           <h4>Packaging</h4>
-          <p>From flat dieline to 3D object. Tactile, structured, memorable unboxing.</p>
+          <p>From flat dieline to 3D tactile object</p>
         </div>
-        <div class="exp-card">
-          <span class="exp-icon">[6]</span>
-          <h4>Digital & Motion</h4>
-          <p>ASCII art, generative experiments, kinetic type on screen.</p>
+        <div class="exp-item">
+          <div class="exp-icon">⬡</div>
+          <h4>Digital &amp; Motion</h4>
+          <p>ASCII art, generative, kinetic type on screen</p>
         </div>
       </div>
     </section>
-
 
     <!-- ===== ABOUT ===== -->
     <section id="about">
-      <div class="section-head">
-        <h2 class="section-title">About</h2>
-        <span class="section-num">03</span>
-      </div>
+      <h2 class="sec-title"><span class="sec-num">03</span> About</h2>
 
-      <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-placeholder">
-            <pre>   (•◡•)
-  /︶︶︶\
- /       \</pre>
-          </div>
-        </div>
-        <div class="about-text">
-          <p class="about-lead">
-            I'm <span class="highlight">Lulu</span>, a visual designer building at the edge of
-            <span class="highlight">rigid systems</span> and
-            <span class="highlight">playful chaos</span>.
-          </p>
-          <p class="about-desc">
-            My work lives in the space between Swiss precision and ASCII romance.
-            I design identities, posters, zines, and digital experiments that feel
-            structured but never sterile — each project a small world with its own rules.
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">6</span>
-              <span class="stat-label">Projects in progress</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Open to collaborate</span>
-            </div>
-          </div>
+      <div class="about-content">
+        <p class="about-lead">I'm <span class="hl">Lulu</span> — a visual designer working at the intersection of rigid structure and playful chaos.</p>
+        <p class="about-text">My practice spans typography, brand identity, poster design, and digital experimentation. I treat every project as a small world with its own visual rules — structured enough to hold, loose enough to breathe.</p>
+        <div class="about-row">
+          <span>Currently building portfolio &amp; open to work</span>
+          <span class="about-dot">·</span>
+          <span>Based in China</span>
         </div>
       </div>
     </section>
 
-
     <!-- ===== CONTACT ===== -->
     <section id="contact">
-      <div class="section-head">
-        <h2 class="section-title">Contact</h2>
-        <span class="section-num">04</span>
-      </div>
+      <h2 class="sec-title"><span class="sec-num">04</span> Contact</h2>
 
-      <div class="contact-block">
-        <p class="contact-cta">Got a project? Let's make something.</p>
-        <a href="mailto:wjxblzml@outlook.com" class="contact-link">wjxblzml@outlook.com</a>
-        <div class="social-links">
-          <a href="https://instagram.com/lunachandesu" class="social-link">IG @lunachandesu</a>
-          <a href="#" class="social-link">Behance</a>
-          <a href="#" class="social-link">Pinterest</a>
+      <div class="contact-content">
+        <p class="contact-cta">Say hello —</p>
+        <a href="mailto:wjxblzml@outlook.com" class="contact-email">wjxblzml@outlook.com</a>
+        <div class="social-row">
+          <a href="https://instagram.com/lunachandesu" class="soc-link">Instagram</a>
+          <a href="#" class="soc-link">Behance</a>
+          <a href="#" class="soc-link">Pinterest</a>
         </div>
       </div>
     </section>
@@ -302,8 +157,7 @@
   </main>
 
   <footer>
-    <span class="footer-ascii">(◕‿◕) ♡</span>
-    <span>itsluluspeaking &copy; 2026</span>
+    <span>&copy; 2026 itsluluspeaking</span>
   </footer>
 
   <script src="script.js"></script>

@@ -31,13 +31,37 @@
 
   <main>
     <section class="hero">
-      <div class="ascii-star" aria-hidden="true">
-        <pre>  ✦
- *   *
-✦  ✦
-*   *
-  ✦</pre>
+
+      <!-- LOGO OPTIONS — pick one, remove the others -->
+      <div class="logo-options">
+        <!-- A: Geometric diamond mark + wordmark -->
+        <div class="logo-opt" id="logo-a">
+          <svg class="logo-mark" width="40" height="44" viewBox="0 0 40 44" fill="none">
+            <rect x="20" y="0" width="28" height="28" transform="rotate(45 20 0)" stroke="#E83A47" stroke-width="2.5" fill="none"/>
+            <circle cx="20" cy="24" r="3" fill="#3B5FE0"/>
+            <line x1="10" y1="38" x2="30" y2="38" stroke="#E83A47" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-wordmark">itsluluspeaking</span>
+        </div>
+
+        <!-- B: ASCII terminal style -->
+        <div class="logo-opt" id="logo-b">
+          <span class="logo-prompt">></span>
+          <span class="logo-text">itsluluspeaking</span>
+          <span class="logo-cursor">_</span>
+        </div>
+
+        <!-- C: Bracket + star framed -->
+        <div class="logo-opt" id="logo-c">
+          <span class="logo-bracket">(</span>
+          <span class="logo-star-dot">✦</span>
+          <span class="logo-wordmark-sm">itsluluspeaking</span>
+          <span class="logo-star-dot">✦</span>
+          <span class="logo-bracket">)</span>
+        </div>
       </div>
+      <!-- END LOGO OPTIONS -->
+
       <h1 class="hero-name">itslulu<br>speaking</h1>
       <p class="hero-sub">Visual Design &mdash; Typography, Systems, Digital Play</p>
       <div class="hero-line"></div>

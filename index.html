@@ -8,156 +8,145 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
 
-  <header>
-    <a href="#" class="logo-link">
-      <svg class="bunny" width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <ellipse cx="8" cy="14" rx="7" ry="8" fill="#3B5FE0" opacity="0.12"/>
-        <path d="M8 6 C6 2, 3 3, 4 7 C4 10, 6 12, 8 14" stroke="#3B5FE0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-        <path d="M10 6 C12 2, 15 3, 14 7 C13 10, 11 12, 9 14" stroke="#3B5FE0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-        <circle cx="6.5" cy="9.5" r="1" fill="#E83A47"/>
-        <circle cx="10.5" cy="9.5" r="1" fill="#E83A47"/>
-      </svg>
-      itsluluspeaking
-    </a>
-    <nav>
+  <nav>
+    <a href="/" class="nav-home">itsluluspeaking</a>
+    <div class="nav-links">
       <a href="#work" class="nav-link">Work</a>
       <a href="#expertise" class="nav-link">Expertise</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main>
-
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <section class="hero">
-      <h1 class="hero-name">
-        <span class="line1">itslulu</span>
-        <span class="line2">speaking</span>
-      </h1>
-      <p class="hero-desc">Visual designer. I make typography, identities &amp; digital experiments that feel alive.</p>
+      <h1>Visual designer.<br>Typography, systems,<br>digital play.</h1>
+      <p class="hero-lead">I make identities and experiments that feel structured<br>enough to trust, loose enough to surprise.</p>
     </section>
 
-    <!-- ===== WORK ===== -->
-    <section id="work">
-      <h2 class="sec-title"><span class="sec-num">01</span> Work</h2>
-
+    <!-- WORK -->
+    <section id="work" class="section-soft">
+      <div class="section-label">Work</div>
       <div class="work-list">
-
         <a href="#" class="work-row">
           <span class="wr-num">01</span>
-          <span class="wr-title">Typographic Poster Series</span>
-          <span class="wr-cat">Poster / Print</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">Typographic Poster Series</span>
+            <span class="wr-desc">ASCII + Swiss hybrid. Risograph texture, experimental layout.</span>
+          </span>
+          <span class="wr-tag">Poster / Print</span>
         </a>
         <a href="#" class="work-row">
           <span class="wr-num">02</span>
-          <span class="wr-title">Cultural Space Branding</span>
-          <span class="wr-cat">Identity / System</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">Cultural Space Branding</span>
+            <span class="wr-desc">Complete VI system. Stationery, signage, environmental.</span>
+          </span>
+          <span class="wr-tag">Identity</span>
         </a>
         <a href="#" class="work-row">
           <span class="wr-num">03</span>
-          <span class="wr-title">Independent Zine</span>
-          <span class="wr-cat">Editorial / Layout</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">Independent Zine</span>
+            <span class="wr-desc">Print publication. Collage meets type. DIY aesthetic.</span>
+          </span>
+          <span class="wr-tag">Editorial</span>
         </a>
         <a href="#" class="work-row">
           <span class="wr-num">04</span>
-          <span class="wr-title">ASCII &amp; Digital Experiments</span>
-          <span class="wr-cat">Digital Art</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">ASCII &amp; Digital Experiments</span>
+            <span class="wr-desc">Terminal visuals, glitch art, generative typography.</span>
+          </span>
+          <span class="wr-tag">Digital</span>
         </a>
         <a href="#" class="work-row">
           <span class="wr-num">05</span>
-          <span class="wr-title">Artisan Goods Packaging</span>
-          <span class="wr-cat">Packaging</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">Artisan Goods Packaging</span>
+            <span class="wr-desc">Structure design, label systems, unboxing experience.</span>
+          </span>
+          <span class="wr-tag">Packaging</span>
         </a>
         <a href="#" class="work-row">
           <span class="wr-num">06</span>
-          <span class="wr-title">Kinetic Typography</span>
-          <span class="wr-cat">Motion</span>
-          <span class="wr-year">2026</span>
+          <span class="wr-main">
+            <span class="wr-title">Kinetic Typography</span>
+            <span class="wr-desc">Moving type, music visuals, loop experiments.</span>
+          </span>
+          <span class="wr-tag">Motion</span>
         </a>
-
       </div>
     </section>
 
-    <!-- ===== EXPERTISE ===== -->
-    <section id="expertise">
-      <h2 class="sec-title"><span class="sec-num">02</span> Expertise</h2>
-
-      <div class="exp-list">
-        <div class="exp-item">
-          <div class="exp-icon">⟡</div>
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section-dark">
+      <div class="section-label on-dark">Expertise</div>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Typography</h4>
-          <p>Custom type, kinetic layouts, letterforms with voice</p>
+          <p>Custom type, kinetic layouts, letterforms that carry voice.</p>
         </div>
-        <div class="exp-item">
-          <div class="exp-icon">⬡</div>
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Visual Systems</h4>
-          <p>Brand identities on grids — and deliberate rule-breaking</p>
+          <p>Brand identities built on grids and deliberate rule-breaking.</p>
         </div>
-        <div class="exp-item">
-          <div class="exp-icon">☲</div>
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Poster Design</h4>
-          <p>Single-frame impact. Bold composition, limited palette</p>
+          <p>Single-frame impact. Bold composition, limited palette.</p>
         </div>
-        <div class="exp-item">
-          <div class="exp-icon">◫</div>
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Editorial</h4>
-          <p>Zines, lookbooks, publications with personality</p>
+          <p>Zines, lookbooks, publications with rhythm and personality.</p>
         </div>
-        <div class="exp-item">
-          <div class="exp-icon">◪</div>
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Packaging</h4>
-          <p>From flat dieline to 3D tactile object</p>
+          <p>From flat dieline to 3D object. Tactile, structured.</p>
         </div>
-        <div class="exp-item">
-          <div class="exp-icon">⬡</div>
+        <div class="exp-card">
+          <div class="exp-marker"></div>
           <h4>Digital &amp; Motion</h4>
-          <p>ASCII art, generative, kinetic type on screen</p>
+          <p>ASCII art, generative experiments, kinetic type.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ABOUT -->
     <section id="about">
-      <h2 class="sec-title"><span class="sec-num">03</span> About</h2>
-
-      <div class="about-content">
-        <p class="about-lead">I'm <span class="hl">Lulu</span> — a visual designer working at the intersection of rigid structure and playful chaos.</p>
-        <p class="about-text">My practice spans typography, brand identity, poster design, and digital experimentation. I treat every project as a small world with its own visual rules — structured enough to hold, loose enough to breathe.</p>
-        <div class="about-row">
-          <span>Currently building portfolio &amp; open to work</span>
-          <span class="about-dot">·</span>
-          <span>Based in China</span>
+      <div class="section-label">About</div>
+      <div class="about-grid">
+        <p class="about-lead">I'm Lulu, a visual designer working at the intersection of <i>rigid structure</i> and <i>playful chaos</i>.</p>
+        <div class="about-col">
+          <p>My practice spans typography, brand identity, poster design, and digital experimentation. Each project is a small world with its own rules &mdash; structured enough to hold, loose enough to breathe.</p>
+          <p class="about-status">Currently building portfolio &amp; open to collaborations.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact">
-      <h2 class="sec-title"><span class="sec-num">04</span> Contact</h2>
-
-      <div class="contact-content">
-        <p class="contact-cta">Say hello —</p>
-        <a href="mailto:wjxblzml@outlook.com" class="contact-email">wjxblzml@outlook.com</a>
-        <div class="social-row">
-          <a href="https://instagram.com/lunachandesu" class="soc-link">Instagram</a>
-          <a href="#" class="soc-link">Behance</a>
-          <a href="#" class="soc-link">Pinterest</a>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section-soft">
+      <div class="section-label">Contact</div>
+      <h2 class="contact-heading">Say hello.</h2>
+      <a href="mailto:wjxblzml@outlook.com" class="contact-link">wjxblzml@outlook.com</a>
+      <div class="social-row">
+        <a href="https://instagram.com/lunachandesu">Instagram</a>
+        <a href="#">Behance</a>
+        <a href="#">Pinterest</a>
       </div>
     </section>
 
   </main>
 
   <footer>
-    <span>&copy; 2026 itsluluspeaking</span>
+    <span>itsluluspeaking</span>
+    <span>&copy; 2026</span>
   </footer>
 
   <script src="script.js"></script>

@@ -4,10 +4,11 @@
 :root {
   --bg: #fafaf8;
   --text: #1a1a1a;
-  --text-muted: #6b6b6b;
-  --accent: #b8a9c9;
-  --accent-2: #e8d5d0;
-  --line: #e0e0dc;
+  --text-muted: #777777;
+  --accent: #E83A47;
+  --accent-blue: #3B5FE0;
+  --accent-yellow: #FFD93D;
+  --line: #e8e8e5;
   --font-en: 'Space Grotesk', 'SF Pro Display', 'Helvetica Neue', system-ui, -apple-system, sans-serif;
   --font-cn: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
 }
@@ -101,8 +102,8 @@ nav {
 .hero-line {
   margin-top: 3rem;
   width: 4rem;
-  height: 1px;
-  background: var(--text);
+  height: 2px;
+  background: var(--accent);
   animation: lineExtend 1.2s 0.5s both;
 }
 
@@ -136,8 +137,8 @@ section {
 .section-title::before {
   content: '';
   width: 1.5rem;
-  height: 1px;
-  background: var(--line);
+  height: 2px;
+  background: var(--accent-blue);
   transition: width 0.6s ease;
 }
 
@@ -162,7 +163,7 @@ section {
 
 .work-img-placeholder {
   aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, #f0edf4 0%, #ede8e5 50%, #f0eff2 100%);
+  background: linear-gradient(135deg, #FDF2F3 0%, #F0EEFC 50%, #FFFCF0 100%);
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -310,7 +311,7 @@ section {
 }
 
 .contact-link:hover {
-  border-color: var(--text);
+  border-color: var(--accent);
 }
 
 .social-links {
@@ -374,7 +375,7 @@ footer {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(184,169,201,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(232,58,71,0.06) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     transition: opacity 0.4s ease;
     opacity: 0;

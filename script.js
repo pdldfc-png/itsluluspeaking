@@ -67,14 +67,14 @@ document.querySelectorAll('.work-item').forEach(item => {
     if (glow) {
       glow.style.width = '400px';
       glow.style.height = '400px';
-      glow.style.background = 'radial-gradient(circle, rgba(184,169,201,0.12) 0%, transparent 70%)';
+      glow.style.background = 'radial-gradient(circle, rgba(232,58,71,0.10) 0%, transparent 70%)';
     }
   });
   item.addEventListener('mouseleave', function() {
     if (glow) {
       glow.style.width = '300px';
       glow.style.height = '300px';
-      glow.style.background = 'radial-gradient(circle, rgba(184,169,201,0.08) 0%, transparent 70%)';
+      glow.style.background = 'radial-gradient(circle, rgba(232,58,71,0.06) 0%, transparent 70%)';
     }
   });
 });

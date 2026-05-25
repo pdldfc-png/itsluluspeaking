@@ -1,3 +1,39 @@
+// === GENERATE ASCII BACKGROUND ===
+(function generateAsciiBg() {
+  const bg = document.querySelector('.ascii-bg');
+  if (!bg) return;
+
+  const chars = ['·', '˚', '✧', '｡', '  ', '✦', '  ', '  ', '  ', '｡', '·', '⋆', '  ', '  ', '  ', '  ',
+                 '  ', '  ', '  ', '  ', '☆', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '];
+  const cols = Math.ceil(window.innerWidth / 16);
+  const rows = Math.ceil(window.innerHeight / 25);
+  const lines = [];
+
+  for (let y = 0; y < rows; y++) {
+    let line = '';
+    for (let x = 0; x < cols; x++) {
+      line += chars[Math.floor(Math.random() * chars.length)];
+    }
+    lines.push(line);
+  }
+
+  bg.textContent = lines.join('\n');
+
+  window.addEventListener('resize', () => {
+    const newCols = Math.ceil(window.innerWidth / 16);
+    const newRows = Math.ceil(window.innerHeight / 25);
+    const newLines = [];
+    for (let y = 0; y < newRows; y++) {
+      let line = '';
+      for (let x = 0; x < newCols; x++) {
+        line += chars[Math.floor(Math.random() * chars.length)];
+      }
+      newLines.push(line);
+    }
+    bg.textContent = newLines.join('\n');
+  });
+})();
+
 // === CURSOR GLOW ===
 const glow = document.querySelector('.cursor-glow');
 let mouseX = 0, mouseY = 0;
@@ -13,7 +49,6 @@ document.addEventListener('mouseleave', () => {
   if (glow) glow.classList.remove('active');
 });
 
-// Smooth follow with requestAnimationFrame
 function animateGlow() {
   currentX += (mouseX - currentX) * 0.08;
   currentY += (mouseY - currentY) * 0.08;
@@ -25,12 +60,11 @@ function animateGlow() {
 }
 animateGlow();
 
-// === SCROLL REVEAL WITH STAGGER ===
+// === SCROLL REVEAL ===
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // Reveal section title lines
       if (entry.target.classList.contains('section-title')) {
         entry.target.classList.add('revealed');
       }
@@ -43,7 +77,7 @@ document.querySelectorAll('.work-item, .about-intro, .about-details, .contact-bl
   observer.observe(el);
 });
 
-// === PARALLAX HERO (rAF for performance) ===
+// === PARALLAX HERO ===
 const heroName = document.querySelector('.hero-name');
 let ticking = false;
 
@@ -61,13 +95,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// === WORK ITEM HOVER — dynamic glow intensity ===
+// === WORK ITEM HOVER — glow intensifies ===
 document.querySelectorAll('.work-item').forEach(item => {
   item.addEventListener('mouseenter', function() {
     if (glow) {
       glow.style.width = '400px';
       glow.style.height = '400px';
-      glow.style.background = 'radial-gradient(circle, rgba(232,58,71,0.10) 0%, transparent 70%)';
+      glow.style.background = 'radial-gradient(circle, rgba(232,58,71,0.12) 0%, transparent 70%)';
     }
   });
   item.addEventListener('mouseleave', function() {

@@ -8,8 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grain"></div>
+  <div class="ascii-bg"></div>
   <div class="cursor-glow"></div>
+
+  <!-- ASCII corner decorations -->
+  <div class="ascii-corner corner-tl" aria-hidden="true">
+    <pre>✦ ˚ 　⋆｡
+* 　 ✦
+˚ ☾</pre>
+  </div>
+  <div class="ascii-corner corner-br" aria-hidden="true">
+    <pre>  ╭◜◝ ͜ ◜◝╮
+  ( ・ω・ )
+  ╰◟◞ ͜ ◟◞╯</pre>
+  </div>
 
   <nav>
     <a href="#work" class="nav-link">Work</a>
@@ -19,26 +31,35 @@
 
   <main>
     <section class="hero">
+      <div class="ascii-star" aria-hidden="true">
+        <pre>  ✦
+ *   *
+✦  ✦
+*   *
+  ✦</pre>
+      </div>
       <h1 class="hero-name">itslulu<br>speaking</h1>
-      <p class="hero-sub">Graphic Designer & Visual Storyteller</p>
+      <p class="hero-sub">Visual Design &mdash; Typography, Systems, Digital Play</p>
       <div class="hero-line"></div>
     </section>
 
     <section id="work">
       <h2 class="section-title">Selected Work</h2>
       <div class="work-grid">
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="01">
-              <span class="work-tag">Concept Visual</span>
+              <span class="work-tag">Poster</span>
             </div>
           </div>
           <div class="work-info">
             <span class="work-num">01</span>
-            <h3>Girl Group Concept</h3>
-            <p>Visual Identity / Album Art / Merch</p>
+            <h3>Typographic Poster Series</h3>
+            <p>Experimental layout / ASCII + Swiss hybrid / Risograph texture</p>
           </div>
         </div>
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="02">
@@ -47,58 +68,68 @@
           </div>
           <div class="work-info">
             <span class="work-num">02</span>
-            <h3>Bookshop & Record Store</h3>
-            <p>Branding / Packaging / Poster</p>
+            <h3>Cultural Space Branding</h3>
+            <p>Complete VI system / Stationery / Environmental graphics</p>
           </div>
         </div>
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="03">
-              <span class="work-tag">Lookbook</span>
+              <span class="work-tag">Editorial</span>
             </div>
           </div>
           <div class="work-info">
             <span class="work-num">03</span>
-            <h3>Streetwear Lookbook</h3>
-            <p>Editorial / Layout / Social</p>
+            <h3>Independent Zine</h3>
+            <p>Print layout / Collage + type / DIY aesthetic</p>
           </div>
         </div>
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="04">
-              <span class="work-tag">Poster Series</span>
+              <span class="work-tag">Digital Art</span>
             </div>
           </div>
           <div class="work-info">
             <span class="work-num">04</span>
-            <h3>Festival Poster Series</h3>
-            <p>Poster / Motion / Sticker</p>
+            <h3>ASCII & Digital Experiments</h3>
+            <p>Generative typography / Terminal visuals / Glitch art</p>
           </div>
         </div>
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="05">
-              <span class="work-tag">Exhibition</span>
+              <span class="work-tag">Packaging</span>
             </div>
           </div>
           <div class="work-info">
             <span class="work-num">05</span>
-            <h3>Digital Art Exhibition</h3>
-            <p>Key Visual / Ticket / Outdoor</p>
+            <h3>Artisan Goods Packaging</h3>
+            <p>Structure design / Label system / Unboxing experience</p>
           </div>
         </div>
+
         <div class="work-item">
           <div class="work-img-wrapper">
             <div class="work-img-placeholder" data-project="06">
-              <span class="work-tag">App Concept</span>
+              <span class="work-tag">Motion</span>
             </div>
           </div>
           <div class="work-info">
             <span class="work-num">06</span>
-            <h3>Social App Concept</h3>
-            <p>UI Design / Store Assets / Motion</p>
+            <h3>Kinetic Typography</h3>
+            <p>Moving type / Music visuals / Loop experiments</p>
           </div>
         </div>
+
+      </div>
+
+      <!-- ASCII divider -->
+      <div class="ascii-divider" aria-hidden="true">
+        · · ──  ✦  ── · ·
       </div>
     </section>
 
@@ -106,20 +137,23 @@
       <h2 class="section-title">About</h2>
       <div class="about-grid">
         <p class="about-intro">
-          I'm Lulu — a graphic designer based in China, drawn to the space where minimal structure meets playful experimentation.
+          I'm Lulu — a visual designer obsessed with the tension between
+          <span class="highlight">rigid grids</span> and
+          <span class="highlight">playful expression</span>.
+          I build visual systems that feel alive.
         </p>
         <div class="about-details">
           <div class="detail-row">
             <span class="detail-label">Focus</span>
-            <span>Brand Identity / Editorial / Poster / Motion</span>
+            <span>Typography / Visual Systems / Poster / Digital</span>
           </div>
           <div class="detail-row">
-            <span class="detail-label">Approach</span>
-            <span>Clean grids, bold typography, soft textures</span>
+            <span class="detail-label">Vibe</span>
+            <span>ASCII romantic, Swiss grids, soft textures, bold colour</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Currently</span>
-            <span>Building portfolio & open to commissions</span>
+            <span>Building portfolio & open to collaborations</span>
           </div>
         </div>
       </div>
@@ -139,6 +173,7 @@
   </main>
 
   <footer>
+    <span class="footer-ascii">(◕‿◕) ♡ </span>
     <span>itsluluspeaking &copy; 2026</span>
   </footer>
 
